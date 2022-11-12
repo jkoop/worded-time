@@ -41,11 +41,12 @@ class WordedTimeController extends Controller {
                 $hour = 12;
             }
 
+            $morning = $hour < 12;
+
             if ($hour > 12) {
                 $hour = $hour - 12;
             }
 
-            $morning = $hour < 12;
             $almost = date('i') % 5 >= 3;
             $justAfter = date('i') % 5 < 3 && date('i') % 5 != 0;
 
@@ -68,6 +69,7 @@ class WordedTimeController extends Controller {
             $evening = false;
 
             if ($morning && $hour == 12 && $minute > 30) {
+                $morning = false;
                 $midNight = true;
             } else if ($morning) {
                 $inThe = true;
