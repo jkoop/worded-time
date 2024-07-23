@@ -1,6 +1,5 @@
 html,
 body {
-    background: #111;
     color: grey;
 }
 
@@ -35,6 +34,11 @@ body.contentOnly pre {
 }
 
 @media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background: #111;
+    }
+    
     pre {
         color: #333;
     }
