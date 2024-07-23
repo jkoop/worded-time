@@ -1,0 +1,51 @@
+html,
+body {
+    background: #111;
+    color: grey;
+}
+
+pre {
+    color: #333;
+    text-align: center;
+    font-size: 7dvmin;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+    width: fit-content;
+    height: fit-content;
+}
+
+.on {
+    color: #000;
+}
+
+body.contentOnly pre {
+    font-size: 7vh;
+}
+
+@media (orientation: portrait) {
+    body.contentOnly pre {
+        font-size: 7vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    pre {
+        color: #333;
+    }
+
+    .on {
+        color: white;
+    }
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    color: grey;
+}
